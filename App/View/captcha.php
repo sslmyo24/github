@@ -1,21 +1,11 @@
 <?php
-	function inter_incre ($stand, $max_inter, $val_local, $arr) {
-		for ($i= $max_inter*-1; $i <= $max_inter; $i++) {
-			switch ($val_local) {
-				case 'key':
-					if (array_key_exists($stand + $i, $arr)) return true;
-					break;
-				case 'val':
-					if (in_array($stand + $i, $arr)) return true;
-					break;
-			}
-		}
-	}
+	require_once('C:\\xampp\\htdocs\\App\\Core\\Lib.php');
 	header('Content-Type: image/jpeg');
 	$img_width = 400;
 	$img_height = 70;
-	$font_size = 20;
-	$font_url = "C:\\xampp\\htdocs\\Public\\font\\arial.ttf";
+	$font_size = 30;
+	$font_dir = "C:\\xampp\\htdocs\\Public\\font";
+	$font_arr = read_file_list($font_dir);
 	$image = imagecreate($img_width, $img_height);
 	imagecolorallocate($image, 255, 255, 255);
 	$text_color = imagecolorallocate($image, 0, 0, 0);
@@ -40,15 +30,16 @@
 	foreach ($captcha_arr as $x => $str) {
 		$captcha_str .= $str;
 		$angle = rand(-90, 90);
+		$font_url = $font_arr[rand(0, count($font_arr) - 1)];
 		imagettftext($image, $font_size, $angle, $x, $y_location[$x], $text_color, $font_url, $str);
 	}
 	$_SESSION['code'] = $captcha_str;
 	$line_count = rand(5, 15);
 	for ($i=0; $i < $line_count; $i++) {
-		$x1 = rand(0, $img_width);
-		$x2 = rand(0, $img_width);
+		$x1 = rand(0, $img_width/3);
+		$x2 = rand($img_width/2, $img_width);
 		$y1 = rand(0, $img_height);
 		$y2 = rand(0, $img_height);
-		imageline($image, $x1, $x2, $y1, $y2, $text_color);
+		imageline($image, $x1, $y1, $x2, $y2, $text_color);
 	}
 	imagejpeg($image);

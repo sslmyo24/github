@@ -72,3 +72,47 @@
 			return false;
 		}
 	}
+
+	function inter_incre ($stand, $max_inter, $val_local, $arr) {
+		for ($i= $max_inter*-1; $i <= $max_inter; $i++) {
+			switch ($val_local) {
+				case 'key':
+					if (array_key_exists($stand + $i, $arr)) return true;
+					break;
+				case 'val':
+					if (in_array($stand + $i, $arr)) return true;
+					break;
+			}
+		}
+	}
+
+	/**
+	 * get file list
+	 * @param  [string] $dir [directory url]
+	 * @return [array]      [file list]
+	 */
+	function read_file_list ($dir) {
+		// 핸들 획득
+		$handle = opendir($dir);
+		// 파일 목록 배열
+		$files = array();
+		// 디렉토리에 포함된 파일을 저장한다.
+		while (($filename = readdir($handle)) !== false) {
+			if ($filename == "." || $filename == "..") {
+				continue;
+			}
+
+			// 파일인 경우만 배열에 추가
+			if (is_file(($file_dir = $dir . "/" . $filename))) {
+				$files[] = $file_dir;
+			}
+		}
+
+		// 핸들 해제
+		closedir($handle);
+
+		// 배열 정렬
+		sort($files);
+
+		return $files;
+	}

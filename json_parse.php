@@ -1,30 +1,5 @@
 <?php
-	function read_file_list ($dir) {
-		// 핸들 획득
-		$handle = opendir($dir);
-		// 파일 목록 배열
-		$files = array();
 
-		// 디렉토리에 포함된 파일을 저장한다.
-		while (($filename = readdir($handle)) !== false) {
-			if ($filename == "." || $filename == "..") {
-				continue;
-			}
-
-			// 파일인 경우만 배열에 추가
-			if (is_file(($file_dir = $dir . "/" . $filename))) {
-				if (get_ext($filename) == 'json') $files[] = $file_dir;
-			}
-		}
-
-		// 핸들 해제
-		closedir($handle);
-
-		// 배열 정렬
-		sort($files);
-
-		return $files;
-	}
 
 	/**
 	 * json parse

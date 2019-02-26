@@ -34,7 +34,7 @@ nav a {color:#fff;font-weight:normal;}
 #join-form input {width:466px;height:40px;border-radius:5px;border-style:none;border:1px solid #aaa;background:#fafbfc;box-shadow:1px 1px .5px inset #ddd;box-sizing:border-box;margin-bottom:10px;padding-left:10px;}
 #join-form input:focus {background:#fff;outline:none;border:3px solid #b0cef1;}
 #join-form .des {font-size:12px;width:466px;}
-#join-form .captcha {margin-top:50px;width:}
+#join-form .captcha {margin-top:50px;width:400px;height:70px;}
 #join-form .captcha > img {display:block;}
 #join-form button {border-style:none;width:140px;height:35px;border-radius:5px;margin-top:50px;}
 #join-form button:disabled {background:#94d3a2;color:hsla(0,0%,100%,.75);}
