@@ -4,8 +4,8 @@
 
 	// path
 	define("_DIR", __dir__);
-	define("_APP", _DIR."/App");
-	define("_PUBLIC", _DIR."/Public");
+	define("_APP", _DIR."\\App");
+	define("_PUBLIC", _DIR."\\Public");
 
 	// url
 	define("HOME", str_replace("/index.php", "", $_SERVER['PHP_SELF']));

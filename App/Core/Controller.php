@@ -28,6 +28,7 @@
 			}
 			$ctr = new $ctr_name();
 			$ctr->param = $param;
+			$ctr->model = new Model();
 			$ctr->index();
 		}
 

@@ -13,11 +13,12 @@
 			<div class="name">Password <span>*</span></div>
 			<input type="password" name="pw" value="<?php if (isset($_POST['pw'])) echo $_POST['pw'] ?>">
 			<p class="des">Make sure it's more than 15 characters OR at least 8 characters including a number and a lowercase letter.</p>
+			<p class="captcha-title">Captcha verification</p>
 			<div class="captcha">
-				<img src="<?php echo HOME ?>/App/View/captcha.php" alt="captcha">
+				<img src="<?php echo SRC ?>/img/captcha.php" alt="captcha">
 				<input type="text" name="captcha">
 			</div>
-			<button type="submit" disabled>Create an account</button>
+			<button type="submit">Create an account</button>
 		</form>
 	</section>
 </body>

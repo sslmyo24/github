@@ -1,0 +1,44 @@
+
+			<?php
+				header("Content-Type: image/jpeg");
+				$image = imagecreate(400, 70);
+				imagecolorallocate($image, 255, 255, 255);
+				$text_color = imagecolorallocate($image, 0, 0, 0);
+			imagettftext($image, 30, -52, 141, 40, $text_color, 'C:\xampp\htdocs\Public\font\black.ttf', 'P');
+					imagettftext($image, 30, 22, 141, 40, $text_color, 'C:\xampp\htdocs\Public\font\corbeli.ttf', 'P');
+					imagettftext($image, 30, -51, 317, 33, $text_color, 'C:\xampp\htdocs\Public\font\DAELC___.TTF', 'k');
+					imagettftext($image, 30, 5, 141, 40, $text_color, 'C:\xampp\htdocs\Public\font\ALIEESB_.TTF', 'P');
+					imagettftext($image, 30, -31, 317, 33, $text_color, 'C:\xampp\htdocs\Public\font\SF Movie Poster Bold.ttf', 'k');
+					imagettftext($image, 30, 73, 186, 38, $text_color, 'C:\xampp\htdocs\Public\font\XO.TTF', 'G');
+					imagettftext($image, 30, 27, 141, 40, $text_color, 'C:\xampp\htdocs\Public\font\KRAVET__.TTF', 'P');
+					imagettftext($image, 30, -68, 317, 33, $text_color, 'C:\xampp\htdocs\Public\font\GrutchGrotesk-CondensedLight.ttf', 'k');
+					imagettftext($image, 30, 90, 186, 38, $text_color, 'C:\xampp\htdocs\Public\font\distortion_of_the_brain_and_mind.ttf', 'G');
+					imagettftext($image, 30, -59, 43, 33, $text_color, 'C:\xampp\htdocs\Public\font\COUTURE-Bold.ttf', '5');
+					imagettftext($image, 30, 57, 141, 40, $text_color, 'C:\xampp\htdocs\Public\font\coolvetica rg.ttf', 'P');
+					imagettftext($image, 30, -59, 317, 33, $text_color, 'C:\xampp\htdocs\Public\font\kr1.ttf', 'k');
+					imagettftext($image, 30, 75, 186, 38, $text_color, 'C:\xampp\htdocs\Public\font\FUNDR___.TTF', 'G');
+					imagettftext($image, 30, -31, 43, 33, $text_color, 'C:\xampp\htdocs\Public\font\BLOODY.TTF', '5');
+					imagettftext($image, 30, -83, 99, 39, $text_color, 'C:\xampp\htdocs\Public\font\VIOLATIO.TTF', 'V');
+					imagettftext($image, 30, -13, 141, 40, $text_color, 'C:\xampp\htdocs\Public\font\ABBERANC.TTF', 'P');
+					imagettftext($image, 30, -30, 317, 33, $text_color, 'C:\xampp\htdocs\Public\font\CREABBB_.TTF', 'k');
+					imagettftext($image, 30, 62, 186, 38, $text_color, 'C:\xampp\htdocs\Public\font\visitor2.ttf', 'G');
+					imagettftext($image, 30, -12, 43, 33, $text_color, 'C:\xampp\htdocs\Public\font\SF Old Republic Bold.ttf', '5');
+					imagettftext($image, 30, 30, 99, 39, $text_color, 'C:\xampp\htdocs\Public\font\AliquamRit.ttf', 'V');
+					imagettftext($image, 30, 71, 236, 40, $text_color, 'C:\xampp\htdocs\Public\font\Schluber.ttf', '9');
+					imageline($image, 61, 46, 294, 31, $text_color);
+				imageline($image, 62, 62, 385, 45, $text_color);
+				imageline($image, 102, 37, 233, 13, $text_color);
+				imageline($image, 16, 66, 338, 35, $text_color);
+				imageline($image, 63, 14, 289, 25, $text_color);
+				imageline($image, 9, 67, 336, 32, $text_color);
+				imageline($image, 34, 43, 384, 23, $text_color);
+				imageline($image, 112, 26, 388, 41, $text_color);
+				imageline($image, 34, 18, 366, 26, $text_color);
+				imageline($image, 58, 65, 305, 67, $text_color);
+				imageline($image, 16, 24, 382, 41, $text_color);
+				imageline($image, 58, 52, 294, 6, $text_color);
+				imageline($image, 37, 53, 247, 28, $text_color);
+				imageline($image, 65, 8, 251, 47, $text_color);
+				imageline($image, 85, 23, 321, 19, $text_color);
+				imagejpeg($image);
+			

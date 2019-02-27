@@ -103,7 +103,7 @@
 			}
 
 			// 파일인 경우만 배열에 추가
-			if (is_file(($file_dir = $dir . "/" . $filename))) {
+			if (is_file(($file_dir = $dir . "\\" . $filename))) {
 				$files[] = $file_dir;
 			}
 		}
